@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="css/index.css">
     <!--main css file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <!-- For Form Setup -->
-<!-- <script>
-    emailjs.init("YOUR_USER_ID"); 
-</script> -->
+    <script
+    type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("nH_JYx0NTU2yv8ZoY")
+        })();
+    </script>
 </head>
 <body>
     <!--contains all the div-->
@@ -421,13 +423,13 @@
                 </div>
                 <form id="myForm">
                     <div class="input-line">
-                        <input id="name" type="text" placeholder="Name" class="input-name" required>
-                        <input id="email" type="email" placeholder="Email" class="input-name" required>
+                        <input id="from_name" name="from_name" type="text" placeholder="Name" class="input-name" required>
+                        <input id="from_email" name="from_email" type="email" placeholder="Email" class="input-name" required>
                     </div>
-                    <input type="text" id="subject" placeholder="Subject" class="input-subject" required>
-                    <textarea id="body" class="input-textarea" placeholder="Message" required></textarea>
-                    <button type="submit" id="submit" value="send">Submit</button>
-                </form>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" class="input-subject" required>
+                    <textarea id="message" name="message" class="input-textarea" placeholder="Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>                   
             </div>
             
             <!--Contact form-->
@@ -491,30 +493,20 @@
     </script>
 
 </body>
-<!-- <script>
+<script type="text/javascript">
+    // Attach the event listener once the page loads
     document.getElementById('myForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // Collect form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const body = document.getElementById('body').value;
-    
-        // Send the email
-        emailjs.send('YOUR_SERVICE_ID', 'template_414i2xu', {
-            from_name: name,
-            from_email: email,
-            subject: subject,
-            message: body
-        }).then(function(response) {
-            console.log('Sent successfully:', response);
-            alert('Message sent successfully!');
-        }).catch(function(error) {
-            console.error('Failed to send:', error);
-            alert('Failed to send message.');
-        });
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Send the form data using EmailJS
+        emailjs.sendForm('service_itgxhyu', 'template_oa2z1cg', '#myForm')
+            .then(() => {
+                console.log('SUCCESS!');
+                alert('Your message has been sent successfully!');
+            }, (error) => {
+                console.log('FAILED...', error);
+                alert('There was an error sending your message. Please try again.');
+            });
     });
-    </script> -->
-    
+</script>  
 </html>
