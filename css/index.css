@@ -1785,7 +1785,7 @@ For devices with smaller width like mobile phone
                 flex-direction: row;
                 align-items: center;
                 text-align: left;
-                margin-left: 5%;
+                margin-left: 3%;
             }
             .contact-info-icon-text{
                 color: whitesmoke;
