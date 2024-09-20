@@ -471,10 +471,10 @@ body{
     font-weight: 400;
 }
 .about-first-paragraph .color{
-    font-size: 40px;
+    font-size: 30px;
 }
 .about-first-line{
-    font-size: 35px;
+    font-size: 30px;
     opacity: 1;
     margin-bottom: 10px;
     display: block;
@@ -1133,7 +1133,7 @@ form{
     font-size: 18px;
 }
 .form-header{
-    font-size: 24px;
+    font-size: 20px;
     font-family: poppins;
     font-weight: 400;
     color: whitesmoke;
@@ -2298,9 +2298,9 @@ for tabs and large phones
         border-radius: 40px;
     }
     .about-first-line{
-        font-size: 45px;
+        font-size: 30px;
         opacity: 1;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         display: block;
     }
      .about-first-line .color{
@@ -2308,7 +2308,7 @@ for tabs and large phones
      }
     .about-second-line{
         opacity: .8;
-        font-size: 28px;
+        font-size: 23px;
         font-weight: 200;
     }
     .cv a button{
@@ -2364,7 +2364,7 @@ for tabs and large phones
     .service-description p{
         padding: 10px;
         font-weight: 200;
-        font-size: 18px;
+        font-size: 16px;
         opacity: .8;
     }
     .blogs{
